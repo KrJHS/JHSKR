@@ -7,7 +7,9 @@
 	
 	<style>
 	*{box-sizing:border-box;}
-
+	[class*="col-"] {
+    	width: 100%;
+	}
 	div.container{width:1200px;}
 	.col-1{width: 8.33%;}
 	.col-2 {width: 16.66%;}
@@ -21,9 +23,7 @@
 	.col-10 {width: 83.33%;}
 	.col-11 {width: 91.66%;}
 	.col-12 {width: 100%;}
-	[class*="col-"] {
-  	  width: 100%;
-	}
+	
 	@media only screen and (max-width: 400px;) {
 	 div.container-s{width:400px;}
 	.col-s-1{width: 8.33%;}
