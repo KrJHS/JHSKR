@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+body{
+    background-image:url("christmas.jpg");
+    background-width:900px;
+}
+
+text{
+    font-size: 500%;
+}
+.message {
+
+    position: relative;
+    -webkit-animation: move 5s infinite; 
+    -webkit-animation-name: moving; 
+    -webkit-animation-duration: 5s; 
+    animation-name: moving;
+    animation-duration: 5s;
+}
+
+@-webkit-keyframes moving {
+    0%   {color:red; text-align:center; top:420px;}
+    25%  {color:yellow; text-align:center; top:420px;}
+    50%  {color:green; text-align:center; top:420px;}
+    75%  {color:blue; text-align:center; top:420px;}
+    100% {color:skyblue; text-align:center; top:420px;}
+}
+}
+[class*="col-"] {
+    width: 900px;
+}
+@media only screen (max-width: 600px){
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+@media only screen and (max-width: 900px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+</style>
+</head>
+<body>
+<div class="col-12 col-s-12 message" id ="text"><button onclick="Message();Message2();"><h1><i class="glyphicon glyphicon-envelope"> Click me</h1></i></button>
+<p id="letter"></p>
+<script type="text/javascript">
+    
+        function Message()
+        { 
+        document.getElementById("text").style.fontSize="50px";
+        var person = prompt("Please enter your name", "Name");
+
+        if (person != null) {document.getElementById("text").innerHTML = "Hello " + person + "!<br>You was invited to the Christmas part.<br>Will you come?"}
+
+        }
+        
+
+        function Message2()
+        {
+        setTimeout("alert('Party Information');",5000);
+        setTimeout(function () {document.getElementById("text").innerHTML = "Day : Desember/25/wed <br> Time: 3.pm <br> Where: New York, NY 10020"}, 5500);
+    }
+
+
+
+</script>
+
+</body>
+</html>
