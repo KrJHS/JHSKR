@@ -5,15 +5,12 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <style>
 body{
-    background-image:url("christmas.jpg");
+    background-image:url("christmas2.jpg");
     background-size:cover; width:100%;
     background-repeat:no-repeat;
 
 }
 
-text{
-    font-size: 500%;
-}
 .message {
     position: relative;
     -webkit-animation: move 5s infinite; 
@@ -26,7 +23,7 @@ text{
 @-webkit-keyframes moving {
     0%   {color:red; text-align:center; top:420px;}
     25%  {color:yellow; text-align:center; top:420px;}
-    50%  {color:green; text-align:center; top:420px;}
+    50%  {color:green; text-align:center; top:400px;}
     75%  {color:blue; text-align:center; top:420px;}
     100% {color:skyblue; text-align:center; top:420px;}
 }
@@ -70,7 +67,6 @@ text{
 </head>
 <body>
 <div class="col-12 col-s-12 message" id ="text"><button onclick="Message();Message2();"><h1><i class="glyphicon glyphicon-envelope"> Click me</h1></i></button>
-<p id="letter"></p>
  
 </div>
 
@@ -78,6 +74,7 @@ text{
 
         function Message()
         { 
+        document.getElementById("text").style.fontSize = "50px";
         var person = prompt("Please enter your name", "Name");
 
         if (person != null) {document.getElementById("text").innerHTML = "Hello " + person + "!<br>You was invited to the Christmas part.<br>Will you come?"}
